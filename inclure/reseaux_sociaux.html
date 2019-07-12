@@ -1,0 +1,11 @@
+#SET{reseaux,#ARRAY{
+	facebook,https://www.facebook.com/vera.c.schmid,
+	linkedin,https://www.linkedin.com/in/vera-schmid-88688457/
+}}
+
+<div class="reseaux-sociaux">
+<BOUCLE_reseaux(DATA){source tableau, #GET{reseaux}}>
+	<a href="#VALEUR" title="#CLE">[(#CHEMIN{images/icon_#CLE.png}|image_reduire{32})]</a>
+</BOUCLE_reseaux>
+</div>
+
