@@ -1,0 +1,20 @@
+<BOUCLE_content(RUBRIQUES){id_rubrique}{tout}>
+<header class="container">
+	<h1 class="#EDIT{titre}">#TITRE</h1>
+</header>
+	<div class="main">
+		<INCLURE{fond=modeles/rubrique_logo_owl,
+			caption=non,
+			id_rubrique,
+			items=1,
+			id-carousel=slider_activites,
+			margins=0,
+			height=700,
+			autoHeight=true
+			lazyLoad=true,
+			dots=false,
+			autoplay=true,
+			autoplayHoverPause=true} />
+		[<div class="#EDIT{texte} texte">(#TEXTE)</div>]
+	</div>
+</BOUCLE_content>

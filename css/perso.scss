@@ -1,8 +1,26 @@
 @import 'css/variables_vera';
 
+.rubrique_home .grid {
+	display: block;
+	#content {
+		margin-bottom: 1em;
+	}
+	#extra1, #extra2 {
+		display: none;
+	}
+}
+
 /* Header */
 #logo_site_spip {
 	font-size: 0;
+}
+
+.rubrique_home #content header h1 {
+	display: none;
+}
+
+.main {
+	width: 100%;
 }
 
 /* navigation principale */
