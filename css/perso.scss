@@ -1,5 +1,10 @@
 @import 'css/variables_vera';
 
+/* Header */
+#logo_site_spip {
+	font-size: 0;
+}
+
 /* navigation principale */
 .navbar {
 	background-image: none;
@@ -9,4 +14,17 @@
 .reseaux-sociaux {
 	text-align: right;
 	margin-bottom: 1em;
+}
+
+/* Media queries */
+
+@media (max-width: 800px) {
+
+	.row {
+		.secondaire {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+		}
+	}
 }
