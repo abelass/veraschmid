@@ -102,8 +102,8 @@ header#header, .breadcrumb, footer, #nav {
 	text-align: center;
 }
 .grid-item {
-	margin-bottom: 20px;
-	width: 32.11%;
+	margin-bottom: 1em;
+	width: 30%;
 }
 
 /* Media queries */
@@ -120,9 +120,9 @@ header#header, .breadcrumb, footer, #nav {
 }
 
 @media (max-width: 800px) {
-#extra1, #extra2, #content {
-	grid-column: 1 / 2;
-}
+	#extra1, #extra2, #content {
+		grid-column: 1 / 2;
+	}
 
 	.row {
 		.secondaire {
@@ -136,6 +136,10 @@ header#header, .breadcrumb, footer, #nav {
 		li {
 			width: 49%;
 		}
+	}
+	.grid-item {
+		margin-bottom: 0.15em;
+		width: 45%;
 	}
 }
 
