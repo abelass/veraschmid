@@ -1,4 +1,8 @@
-@import 'css/variables_vera';
+@import 'css/variables';
+
+a:visited {
+	color: $link-color;
+}
 
 .rubrique_home .grid {
 	display: block;
