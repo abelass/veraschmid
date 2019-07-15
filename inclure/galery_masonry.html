@@ -2,7 +2,7 @@
 <div class="masonry">
 <BOUCLE_images(DOCUMENTS){id_article}{extension IN jpg,png,gif}{tout}{par hasard}>
 	<div class="grid-item">
-		[(#FICHIER|image_reduire{150,*})]
+		[(#FICHIER|image_reduire{375,*})]
 	</div>
 </BOUCLE_images>
 </div>
