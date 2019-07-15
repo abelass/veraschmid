@@ -1,0 +1,47 @@
+<BOUCLE_contenu_rubrique(RUBRIQUES){id_rubrique}{tout}>
+<section>
+	<div class="cartouche">
+		[(#LOGO_RUBRIQUE||image_reduire{200,200})]
+		<h1 class="h1 #EDIT{titre}">#TITRE</h1>
+	</div>
+	<div class="main">
+		[(#REM) Boite à outils]
+		#SET{texte,#DESCRIPTIF|sinon{#TEXTE|couper{250}}|textebrut}
+		[(#INCLURE{fond=inclure/outils,env,titre,introduction=#GET{texte},url=#URL_RUBRIQUE})]
+
+		[<div class="#EDIT{texte} texte">(#TEXTE)</div>]
+	</div>
+	[(#REM) Portfolio : album d'images ]
+
+	<B_photographes>
+	<div id="documents_album">
+		<ul>
+		<BOUCLE_photographes(RUBRIQUES){id_parent}{pagination 9}>
+			#SET{titre,#TITRE|couper{50}}
+			<BOUCLE_jobs(ARTICLES){id_rubrique}{!date}{0,1}>
+			<B_images>
+			<li>
+				<a href="#URL_RUBRIQUE" [ title="(#GET{titre}|attribut_html|couper{80})"]>
+					[<span>(#GET{titre})</span>]
+				<BOUCLE_images(DOCUMENTS){id_article}{0,1}{tout}>
+					[(#FICHIER|image_passe_partout{160,160}
+						|image_recadre{160,160}
+						|inserer_attribut{class,spip_logos mouseover_visible}
+						|inserer_attribut{alt,[(#TITRE|attribut_html|couper{80})]})]
+				</BOUCLE_images>
+				</a>
+			</li>
+			</BOUCLE_jobs>
+
+
+			</B_images>
+		</BOUCLE_photographes>
+		</ul>
+		[
+		<p class="pagination">(#PAGINATION)</p>
+		]
+	</div>
+	<!--#documents_album-->
+	</B_photographes>
+</section>
+</BOUCLE_contenu_rubrique>

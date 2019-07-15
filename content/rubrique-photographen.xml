@@ -1,0 +1,5 @@
+<composition>
+	<nom>Rubrique Photographen</nom>
+	<description>Affiche une image par photographe</description>
+	<branche type="rubrique" composition="photographen_jobs" />
+</composition>

@@ -38,6 +38,16 @@ a:visited {
 	margin-bottom: 1em;
 }
 
+/* Masonry */
+.grid-item {
+	margin-bottom: 10px;
+	width: 30%;
+}
+
+.article_photograph_job #content {
+width: 500px;
+}
+
 /* Media queries */
 
 @media (max-width: 800px) {

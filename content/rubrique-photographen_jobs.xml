@@ -1,0 +1,5 @@
+<composition>
+	<nom>Rubrique Photographen - Jobs</nom>
+	<description>Affiche les images des photographes par jobs</description>
+	<branche type="article" composition="photograph_job" />
+</composition>
