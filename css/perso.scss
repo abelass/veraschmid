@@ -19,6 +19,7 @@ header#header, .breadcrumb, footer, #nav {
 
 /* Navigation */
 .navbar {
+	background-image: none;
 	li:first-child {
 		a {
 			padding-left: 0;
@@ -28,6 +29,7 @@ header#header, .breadcrumb, footer, #nav {
 
 .menu_rubriques {
 	text-align: right;
+	margin-bottom: 0;
 	h2 {
 		display: none;
 	}
@@ -46,6 +48,8 @@ header#header, .breadcrumb, footer, #nav {
 	}
 }
 
+
+
 /* Home */
 .rubrique_home .grid {
 	display: block;
@@ -57,15 +61,34 @@ header#header, .breadcrumb, footer, #nav {
 	}
 }
 
+/* Photographen */
+#documents_album {
+	ul {
+		width: 66%;
+		margin: 0 auto;
+		justify-content: space-between;
+		padding-left: 0;
+	}
+	li {
+		width: 48%;
+		margin: 0;
+		height: auto;
+		span {
+			display: block;
+		}
+	}
+	img {
+		max-width: 100%;
+		height : auto;
+		margin: 0;
+	}
+}
 
 .rubrique_home #content header h1 {
 	display: none;
 }
 
-/* navigation principale */
-.navbar {
-	background-image: none;
-}
+
 
 /* divers */
 .reseaux-sociaux {
@@ -83,11 +106,8 @@ header#header, .breadcrumb, footer, #nav {
 	width: 32.11%;
 }
 
-
-
-
 /* Media queries */
-@media (min-width: 801px) {
+@media (min-width: 40.001em) {
 	.navbar {
 		background-color: #fff;
 		height: 45px;
@@ -99,14 +119,31 @@ header#header, .breadcrumb, footer, #nav {
 	}
 }
 
-
 @media (max-width: 800px) {
+#extra1, #extra2, #content {
+	grid-column: 1 / 2;
+}
 
 	.row {
 		.secondaire {
 			display: flex;
 			flex-direction: row;
 			justify-content: space-between;
+		}
+	}
+	#documents_album ul {
+		width: 100%;
+		li {
+			width: 49%;
+		}
+	}
+}
+
+@media (max-width: 414px) {
+	#documents_album ul {
+		li {
+			width: 100%;
+			margin-right: 0;
 		}
 	}
 }

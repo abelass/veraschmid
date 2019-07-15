@@ -9,20 +9,22 @@
 		[
 		<div class="#EDIT{texte} texte">(#TEXTE)</div>
 		] [(#REM) Portfolio : album d'images ]
+	</div>
+	<aside>
 		<B_articles>
 		<div id="documents_album">
-			<ul>
+			<ul class="flex">
 				<BOUCLE_articles(ARTICLES){id_rubrique}{pagination 9}>#SET{titre,#TITRE}
 				<B_documents_portfolio2> <BOUCLE_documents_portfolio2
 					(DOCUMENTS) {id_article} {mode ?}{extension IN png,jpg,gif} {par hasard}{doublons}{tout}{0,1}>
 				<li [(#COMPTEUR_BOUCLE|modulo{4}|=={0}|oui) class="clear"]>
 					<a href="#URL_ARTICLE"
 						[ title="(#GET{titre}|attribut_html|couper{80})"]>
-						[<h3 class="mouseover_cache">(#GET{titre})</h3>]
-						[(#FICHIER
-							|image_passe_partout{160,160} |image_recadre{160,160}
-							|inserer_attribut{class,spip_logos mouseover_visible}
-							|inserer_attribut{alt,[(#TITRE|attribut_html|couper{80})]})]
+						[<span class="h2">(#GET{titre})</span>]
+							<img class="spip_logos" alt="#TITRE"
+								src="[(#FICHIER|image_reduire{450,*}|extraire_attribut{src})]" title="<:accueil_site:>"
+								srcset="[(#FICHIER|image_reduire{400,*}|extraire_attribut{src})] 400w, [(#FICHIER|image_reduire{300,*}|extraire_attribut{src})] 300w"
+							/>
 					</a>
 				</li>
 				</BOUCLE_documents_portfolio2>
@@ -35,7 +37,7 @@
 		</div>
 		<!--#documents_album-->
 		</B_articles>
-	</div>
+	</aside>
 </section>
 
 </BOUCLE_contenu_rubrique>
