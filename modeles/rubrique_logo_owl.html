@@ -44,7 +44,7 @@ Insertion du modele <articleX|owl>
 		<div class="caption[ (#ENV{caption_css})]">[
 			<h3 class="title">(#TITRE)</h3>][
 			<p class="hidden-phone">(#INTRODUCTION|textebrut)</p>]</div>]
-			<a href="#GET{logo}" class="js-colorbox"[ rel="diaporama(#ENV{id-carousel,demo})"]>
+			<a href="#ENV{url,#}">
 				<img [(#ENV{lazyLoad}|=={true}|oui)class="owl-lazy" data-]src="[(#FICHIER
 					|image_passe_partout{#ENV{width,1440},#ENV{height,599}}
 					|image_recadre{#ENV{width,1440},#ENV{height,599}}

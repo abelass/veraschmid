@@ -3,7 +3,16 @@
 	<h1 class="#EDIT{titre}">#TITRE</h1>
 </header>
 	<div class="main">
+
+		<BOUCLE_photographen(RUBRIQUES){composition=photographen}{lang}>
+			#SET{url,#URL_RUBRIQUE}
+		</BOUCLE_photographen>
+			<BOUCLE_photographen_alt(RUBRIQUES){composition=photographen}>
+				#SET{url,#URL_RUBRIQUE}
+			</BOUCLE_photographen_alt>
+		<//B_photographen>
 		<INCLURE{fond=modeles/rubrique_logo_owl,
+			url=#GET{url},
 			caption=non,
 			id_rubrique,
 			items=1,
