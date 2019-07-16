@@ -14,11 +14,11 @@
 		<B_articles>
 		<div id="documents_album">
 			<ul class="flex">
-				<BOUCLE_articles(ARTICLES){id_rubrique}{pagination 9}>#SET{titre,#TITRE}
-				<B_documents_portfolio2> <BOUCLE_documents_portfolio2
-					(DOCUMENTS) {id_article} {mode ?}{extension IN png,jpg,gif} {par hasard}{doublons}{tout}{0,1}>
+				<BOUCLE_articles(ARTICLES){id_rubrique}{pagination 9}>#SET{titre,#TITRE}#SET{id_trad,#ID_TRAD}[(#GET{id_trad}|=={0}|oui)#SET{id_trad,#ID_ARTICLE}]#SET{url,#URL_ARTICLE}
+				<BOUCLE_documents_portfolio2
+					(DOCUMENTS) {id_article = #GET{id_trad}} {mode ?}{extension IN png,jpg,gif} {par hasard}{doublons}{tout}{0,1}>
 				<li [(#COMPTEUR_BOUCLE|modulo{4}|=={0}|oui) class="clear"]>
-					<a href="#URL_ARTICLE"
+					<a href="#GET{url}"
 						[ title="(#GET{titre}|attribut_html|couper{80})"]>
 						[<span class="h2">(#GET{titre})</span>]
 							<img class="spip_logos" alt="#TITRE"
