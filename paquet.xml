@@ -1,7 +1,7 @@
 <paquet
 	prefix="veraschmid"
 	categorie="squelette"
-	version="1.0.0"
+	version="1.0.0.1"
 	etat="dev"
 	compatibilite="[3.2.4;3.2.*]"
 	logo="prive/themes/spip/images/veraschmid-64.png"
@@ -20,6 +20,6 @@
 
 	<necessite nom="wsps_html5_dist" compatibilite="[1.0.0;]" />
 	<necessite nom="wsp_ml" compatibilite="[1.0.0;]" />
-	<necessite nom="owlcarousel" compatibilite="[1.1.0;]" />
+	<necessite nom="owlcarousel" compatibilite="[1.0.21;]" />
 
 </paquet>
