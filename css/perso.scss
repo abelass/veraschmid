@@ -1,14 +1,30 @@
 @import 'css/variables';
 
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
 a:visited {
 	color: $link-color;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
 }
 
 /* Layout */
 .page.grid {
 	grid-template-columns: 100%;
 }
-header#header, .breadcrumb, footer, #nav {
+header#header, .breadcrumb, footer, #nav, #content {
+	width: 100%;
 	grid-column: 1 / 2;
 }
 
@@ -62,6 +78,7 @@ header#header, .breadcrumb, footer, #nav {
 }
 
 /* Photographen */
+
 #documents_album {
 	ul {
 		width: 66%;
@@ -70,7 +87,7 @@ header#header, .breadcrumb, footer, #nav {
 		padding-left: 0;
 	}
 	li {
-		width: 48%;
+		width: 100%;
 		margin: 0;
 		height: auto;
 		span {
@@ -98,15 +115,36 @@ header#header, .breadcrumb, footer, #nav {
 
 /* Masonry */
 
+
+
 .masonry {
-	text-align: center;
-}
-.grid-item {
-	margin-bottom: 1em;
-	width: 30%;
+transition: all .5s ease-in-out;
+column-gap: 1em;
+column-fill: initial;
+column-count: 3;
+  .item {
+		background: #fff;
+		padding: 0;
+		margin: 0;
+		display: inline-block;
+		vertical-align: top;
+	}
+	img {
+		margin: 0 0 1em 0;
+		padding: 0;
+		width: auto;
+	}
 }
 
+
 /* Media queries */
+/* Masonry on large screens */
+@media only screen and (min-width: 1024px) {
+  .masonry {
+    column-count: 3;
+  }
+}
+
 @media (min-width: 40.001em) {
 	.navbar {
 		background-color: #fff;
@@ -115,8 +153,18 @@ header#header, .breadcrumb, footer, #nav {
 		border: none;
 		border-radius: 0;
 		box-shadow: none;
-;
 	}
+}
+
+
+/* Masonry on medium-sized screens */
+
+
+/* Masonry on small screens */
+@media only screen and (max-width: 767px) {
+  .masonry {
+    column-count: 2;
+  }
 }
 
 @media (max-width: 800px) {
