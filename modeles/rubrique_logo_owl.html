@@ -38,7 +38,7 @@ Insertion du modele <articleX|owl>
 </style>
 [(#REM) <!-- Diaporama -->]
 <div id="#ENV{id-carousel,demo}" class="owl-carousel owl-theme[ (#ENV{items}|=={1}|oui)owl-single]">
-	<BOUCLE_documents(DOCUMENTS){id_rubrique?}>#SET{logo,#LOGO_ARTICLE|extraire_attribut{src}}
+	<BOUCLE_documents(DOCUMENTS){id_rubrique?}{tout}>#SET{logo,#LOGO_ARTICLE|extraire_attribut{src}}
 	<div class="owl-slide" data-hash="#ENV{id-carousel,demo}#ID_ARTICLE">
 		[(#ENV{caption,oui}|=={oui}|oui)
 		<div class="caption[ (#ENV{caption_css})]">[

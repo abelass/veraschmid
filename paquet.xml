@@ -1,15 +1,12 @@
 <paquet
 	prefix="veraschmid"
 	categorie="squelette"
-	version="1.0.0.1"
+	version="1.0.0.2"
 	etat="dev"
 	compatibilite="[3.2.4;3.2.*]"
 	logo="prive/themes/spip/images/veraschmid-64.png"
 	documentation="https://github.com/abelass/veraschmid"
 >
-	<!--
-		Paquet généré le 2019-07-09 16:18:41
-	-->
 
 	<nom>Vera Schmid</nom>
 	<!-- Squelettes pour le site veraschmid.com -->

@@ -3,9 +3,8 @@
 	<h1 class="#EDIT{titre}">#TITRE</h1>
 </header>
 	<div class="main">
-
 		<BOUCLE_photographen(RUBRIQUES){composition=photographen}{lang}>
-			#SET{url,#URL_RUBRIQUE}
+			#SET{id_rubrique,#ID_RUBRIQUE}
 		</BOUCLE_photographen>
 			<BOUCLE_photographen_alt(RUBRIQUES){composition=photographen}>
 				#SET{url,#URL_RUBRIQUE}
@@ -14,7 +13,7 @@
 		<INCLURE{fond=modeles/rubrique_logo_owl,
 			url=#GET{url},
 			caption=non,
-			id_rubrique,
+			id_rubrique=#ENV{id_trad},
 			items=1,
 			id-carousel=slider_activites,
 			margins=0,
