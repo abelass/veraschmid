@@ -26,8 +26,14 @@ header#header, .breadcrumb, footer, #nav, #content {
 }
 
 /* Navigation */
+#nav {
+	li {
+		a {
+			border:none;
+		}
+	}
+}
 .navbar {
-	background-image: none;
 	li:first-child {
 		a {
 			padding-left: 0;
@@ -65,7 +71,6 @@ header#header, .breadcrumb, footer, #nav, #content {
 
 /* Home */
 .rubrique_home .grid {
-	display: block;
 	#content {
 		margin-bottom: 1em;
 	}
@@ -139,11 +144,17 @@ header#header, .breadcrumb, footer, #nav, #content {
 	}
 }
 
-@media (min-width: 40.001em) {
+@media (max-width: 800px) {
+	#nav {
+		li {
+			a{
+				text-align: right;
+				padding: 0;
+			}
+		}
+	}
 	.navbar {
 		background-color: #fff;
-		height: 45px;
-		//border-bottom: 1px solid #e7e7e7;
 		border: none;
 		border-radius: 0;
 		box-shadow: none;
