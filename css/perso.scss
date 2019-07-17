@@ -147,18 +147,18 @@ header#header, .breadcrumb, footer, #nav, #content {
 
 @media (max-width: 800px) {
 	#nav {
-		li {
-			a{
-				text-align: right;
-				padding: 0;
+		.navbar {
+			background-color: #fff;
+			border: none;
+			border-radius: 0;
+			box-shadow: none;
+			li {
+				a{
+					text-align: right;
+					padding: 0;
+				}
 			}
 		}
-	}
-	.navbar {
-		background-color: #fff;
-		border: none;
-		border-radius: 0;
-		box-shadow: none;
 	}
 }
 
