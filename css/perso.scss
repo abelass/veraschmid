@@ -27,19 +27,20 @@ header#header, .breadcrumb, footer, #nav, #content {
 
 /* Navigation */
 #nav {
-	li {
-		a {
-			border:none;
+	.navbar {
+		li {
+			a {
+				border:none;
+			}
+		}
+		li:first-child {
+			a {
+				padding-left: 0;
+			}
 		}
 	}
 }
-.navbar {
-	li:first-child {
-		a {
-			padding-left: 0;
-		}
-	}
-}
+
 
 .menu_rubriques {
 	text-align: right;
