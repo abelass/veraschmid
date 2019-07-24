@@ -9,15 +9,6 @@
 				class="#EDIT{soustitre} soustitre">(#SOUSTITRE)</small> ]
 		</h1>
 
-		<p class="publication">
-			[(#VAL{donnees_date}|a_cacher|non)
-			<time pubdate="pubdate" datetime="[(#DATE|date_iso)]">
-				<i class="icon-calendar"></i> [(#DATE|nom_jour) ][(#DATE|affdate)]
-			</time>
-			] [(#VAL{donnees_auteurs}|a_cacher|non)[<span class="authors"><span
-				class="sep">, </span><i class="icon-user"></i> <:par_auteur:>
-				(#LESAUTEURS)</span>]]
-		</p>
 		<div class="postmeta">
 			<BOUCLE_nb_commentaires(FORUMS) {id_article}{plat} />
 			[(#TOTAL_BOUCLE|oui) <span class="comments"> <span class="sep">|</span>
@@ -27,15 +18,8 @@
 			</a>
 			</span> ]
 			<//B_nb_commentaires>
-			<BOUCLE_combien(SIGNATURES) {id_article}{plat} />
-			[(#TOTAL_BOUCLE|oui) <span class="signatures"> <span
-				class="sep">|</span> <a [ href="(#REM|ancre_url{petition})"
-				] [title="(#TOTAL_BOUCLE|singulier_ou_pluriel{zcore:info_1_signature,zcore:info_nb_signatures}|attribut_html)"]>[<i
-					class="icon-ok-circle"></i> (#TOTAL_BOUCLE)]
-			</a>
-			</span> ]
-			<//B_combien>
-			<B_tags> <span class="tags"> <span class="sep">|</span>
+
+			<B_tags> <span class="tags">
 				<ul class="inline">
 					<BOUCLE_tags(MOTS){id_article}>
 					<li><a class="label" href="#URL_MOT"><i class="icon-tag"></i>
