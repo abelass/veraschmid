@@ -1,6 +1,6 @@
-$brand-primary : #838030;
-$link-color: $brand-primary;
+$brand-primary : #000;
+$link-color: #164096;
 $navbar-default-color : #ffffff;
 $navbar-default-bg: #ffffff;
-$navbar-default-link-color: #ef7d92;
-$navbar-default-link-hover-color: #0055A2;
+$navbar-default-link-color: $brand-primary;
+$navbar-default-link-hover-color: $brand-primary;
