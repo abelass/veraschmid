@@ -5,6 +5,9 @@
 		[(#LOGO_RUBRIQUE||image_reduire{200,200})]
 		<h1 class="h1 #EDIT{titre}">#TITRE</h1>
 	</header>
+	<nav>
+		<INCLURE{fond=inclure/navsub,id_rubrique} />
+	</nav>
 	<div class="main">
 		[
 		<div class="#EDIT{texte} texte">(#TEXTE)</div>

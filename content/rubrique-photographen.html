@@ -1,9 +1,9 @@
 <BOUCLE_contenu_rubrique(RUBRIQUES){id_rubrique}{tout}>
 <section>
-	<div class="cartouche">
+	<header class="cartouche">
 		[(#LOGO_RUBRIQUE||image_reduire{200,200})]
 		<h1 class="h1 #EDIT{titre}">#TITRE</h1>
-	</div>
+	</header>
 	<nav>
 		<INCLURE{fond=inclure/navsub,id_rubrique} />
 	</nav>

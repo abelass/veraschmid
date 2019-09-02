@@ -30,8 +30,9 @@
 		</div>
 
 	</header>
-	[(#REM) Boite à outils]
-	[(#INCLURE{fond=inclure/outils,env,titre,introduction=[(#INTRODUCTION|textebrut)],url=#URL_ARTICLE})]
+	<nav>
+		<INCLURE{fond=inclure/navsub,id_rubrique} />
+	</nav>
 	<div class="main">
 		[
 		<div class="#EDIT{chapo} chapo surlignable">(#CHAPO|image_reduire{500,0})</div>
