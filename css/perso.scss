@@ -113,7 +113,7 @@ header#header, .breadcrumb, footer, #nav, #content {
 	margin-bottom: 1em;
 }
 
-/* Masonry */
+/* Masonry from https://w3bits.com/css-masonry/*/
 .masonry {
 	transition: all .5s ease-in-out;
 	column-gap: 1em;
@@ -125,6 +125,7 @@ header#header, .breadcrumb, footer, #nav, #content {
 		margin: 0;
 		vertical-align: top;
 		display: inline-block;
+		width: 100%
 	}
 	img {
 		margin: 0 0 1em 0;
