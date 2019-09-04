@@ -115,7 +115,7 @@ header#header, .breadcrumb, footer, #nav, #content {
 
 /* Masonry from https://w3bits.com/css-masonry/ */
 .masonry {
-	//transition: all .5s ease-in-out;
+	transition: all .5s ease-in-out;
 	column-gap: 1em;
 	column-fill: initial;
 	column-count: 3;
