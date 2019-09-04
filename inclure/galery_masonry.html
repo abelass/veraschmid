@@ -1,13 +1,9 @@
 <B_images>
 <div class="masonry">
-<BOUCLE_images(DOCUMENTS){id_article}{extension IN jpg,png,gif}{tout}{par hasard}>
-	<div class="item">
-		<img
+<BOUCLE_images(DOCUMENTS){id_article}{extension IN jpg,png,gif}{tout}{par hasard}><div class="item"><img
 			alt="#TITRE"
 			src="[(#FICHIER|image_reduire{375,*}|extraire_attribut{src})]" title="<:accueil_site:>"
 			srcset="[(#FICHIER|image_reduire{330,*}|extraire_attribut{src})] 800w, [(#FICHIER|image_reduire{150,*}|extraire_attribut{src})] 400w"
-		/>
-	</div>
-</BOUCLE_images>
+		/></div></BOUCLE_images>
 </div>
 </B_images>
