@@ -1,3 +1,10 @@
+$font-family-sans-serif:  "Avenir Next LT Pro Regular", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+$font-family-serif:       elsieregular, Cambria, "Times New Roman", Times, serif;
+//** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
+$font-family-monospace:   "Courier New", Courier, monospace;
+$font-family-base:        $font-family-sans-serif;
+$headings-font-family:    $font-family-serif;
+
 $brand-primary : #000;
 $link-color: #164096;
 $navbar-default-color : #ffffff;

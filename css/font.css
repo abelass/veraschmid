@@ -1,0 +1,14 @@
+@font-face {
+	font-family: 'Avenir Next LT Pro Regular';
+	font-style: normal;
+	font-weight: normal;
+	src: url('webfonts/avenir-next-lt-pro/AvenirNextLTPro-Regular.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'elsieregular';
+	src: url('webfonts/elsie-regular/elsie-regular-webfont.woff2') format('woff2'),
+			 url('webfonts/elsie-regular/elsie-regular-webfont.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
