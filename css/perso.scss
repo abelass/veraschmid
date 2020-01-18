@@ -23,6 +23,22 @@ header#header, .breadcrumb, footer, #nav, #content {
 	font-size: 0;
 }
 
+#header {
+	header {
+		width: 100%;
+		text-align: center;
+		margin-top: 1.5em;
+		.spip_logos {
+			float: none;
+		}
+	}
+	.secondaire {
+		position: absolute;
+		right: 0;
+		top: 0;
+	}
+}
+
 /* Navigation */
 #nav {
 	.navbar {
