@@ -45,6 +45,16 @@ header#header, .breadcrumb, footer, #nav, #content {
 		li {
 			a {
 				border:none;
+				font-weight: bold;
+				text-transform: lowercase;
+			}
+		}
+		li.on {
+			a:after {
+				content: '';
+				border-bottom: 1px solid;
+				display: block;
+				width: 100%
 			}
 		}
 		li:first-child {
@@ -160,6 +170,16 @@ header#header, .breadcrumb, footer, #nav, #content {
 	}
 }
 
+@media (min-width: 801px) {
+	#nav .navbar ul {
+		position: relative;
+		text-align: center;
+		li {
+			float: none;
+		}
+	}
+}
+
 @media (max-width: 800px) {
 	#nav {
 		.navbar {
@@ -175,9 +195,11 @@ header#header, .breadcrumb, footer, #nav, #content {
 			}
 		}
 	}
+#header .secondaire {
+	left: 1em;
+
 }
 
-@media (max-width: 800px) {
 	#extra1, #extra2, #content {
 		grid-column: 1 / 2;
 	}
