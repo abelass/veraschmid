@@ -1,5 +1,9 @@
 @import 'css/variables';
 
+body {
+	line-height: normal;
+}
+
 a:visited {
 	color: $link-color;
 }
@@ -28,6 +32,15 @@ h1,
 .h1 {
 	font-weight: bold;
 }
+
+p, .p, dl, dd, blockquote, address, pre, table, fieldset {
+	margin-bottom: 0.5em;
+}
+
+.page {
+	text-align: center;
+}
+
 /* Layout */
 .page.grid {
 	grid-template-columns: 100%;
@@ -36,6 +49,11 @@ header#header, .breadcrumb, footer, #nav, #content {
 	width: 100%;
 	grid-column: 1 / 2;
 }
+
+.main {
+	margin-bottom: 3em;
+}
+
 
 /* Header */
 #logo_site_spip {
